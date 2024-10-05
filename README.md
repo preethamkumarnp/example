@@ -25,9 +25,20 @@ Create three(3) EC2 instances on AWS using Ansible loops
 2 Instances with Ubuntu Distribution
 1 Instance with Centos Distribution
 Hint: Use connection: local on Ansible Control node.
-```bash
-sudo apt-get install ansible  # For Ubuntu/Debian
 
+## Task2
+Use the playbook creating-ec2.yml and change the image by looking selected distribution in AWS EC2
+Then change the existing ami id with your distribustion ami id
+
+## Task3
+Use asible-vault module to secure your AWS ACCESS KEY and AWS SECRET KEY 
+SETUP VAULT
+1. Create a password for vault
+   ```bash
+   openssl rand -base64 2048 > vault.pass
+2. Add your AWS credentials using the below vault command
+   ```bash
+   ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass  
 
 ## Task2
 Set up passwordless authentication between Ansible control node and newly created instances.
