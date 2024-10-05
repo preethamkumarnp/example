@@ -38,11 +38,13 @@ SETUP VAULT
    openssl rand -base64 2048 > vault.pass
 2. Add your AWS credentials using the below vault command
    ```bash
-   ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass  
+   ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
+3. Add your AWS ACCESS KEY and AWS SECRET KEY to variables ec2_access_key and ec2_secret_key
+   ```bash
+   c2_access_key: <your access key>
+   ec2_secret_key: <your secret key>
 
-## Task2
-Set up passwordless authentication between Ansible control node and newly created instances.
-
+## Task4
 
 ## Task3
 Automate the shutdown of Ubuntu Instances only using Ansible Conditionals
