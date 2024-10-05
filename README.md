@@ -4,9 +4,9 @@ This Ansible project allows you to easily shut down AWS EC2 instances from your 
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
+- [Task 1](#task1)
+- [Task 2](#task2)
+- [Task 3](#task3)
 - [License](#license)
 - [Contact](#contact)
 
