@@ -1,10 +1,4 @@
 # Ansible-shutdown-instances
-This Ansible project allows you to easily shut down AWS EC2 instances from your local machine.
-
-
-
-# Ansible Shutdown Instance
-
 ## Description
 This Ansible project allows you to easily shut down AWS EC2 instances from your local machine. With a simple command, you can manage your cloud resources efficiently and ensure that your instances are safely powered down.
 
