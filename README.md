@@ -45,8 +45,31 @@ SETUP VAULT
    ec2_secret_key: <your secret key>
 
 ## Task4
+1. Run the command 
+   ```bash
+        ansible-playbook creating-ec2.yml --vault-password-file vault.pass
 
-## Task3
+Setting Up Passwordless Authentication for EC2 Instances
+
+This section outlines how to set up passwordless SSH authentication for your EC2 instances, allowing you to connect securely without needing to enter a password.
+
+### Using Public Key Authentication
+
+1.  Using Public Key
+    ```bash
+      ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
+   * ssh-copy-id: This is the command used to copy your public key to a remote machine.
+   * -f: This flag forces the copying of keys, which can be useful if you have keys already set up and want to overwrite them.
+   * "-o IdentityFile ": This option specifies the identity file (private key) to use for the connection. The -o flag passes this option to the underlying ssh command.
+   * ubuntu@: This is the username (ubuntu) and the IP address of the remote server you want to access.
+  
+2.  Using Password
+    * Go to the file /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+    * Update PasswordAuthentication yes
+    * Restart SSH -> sudo systemctl restart ssh
+
+
+## final
 Automate the shutdown of Ubuntu Instances only using Ansible Conditionals
 
 Hint: Use when condition on ansible gather_facts
