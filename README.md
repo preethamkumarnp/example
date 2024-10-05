@@ -26,6 +26,9 @@ Create three(3) EC2 instances on AWS using Ansible loops
 1 Instance with Centos Distribution
 Hint: Use connection: local on Ansible Control node.
 
+sudo apt-get install ansible  # For Ubuntu/Debian
+
+
 ## Task2
 Set up passwordless authentication between Ansible control node and newly created instances.
 
