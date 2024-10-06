@@ -69,7 +69,16 @@ This section outlines how to set up passwordless SSH authentication for your EC2
     * Restart SSH -> sudo systemctl restart ssh
 
 
-## final
-Automate the shutdown of Ubuntu Instances only using Ansible Conditionals
+## Task5
+   1. Create inventory.ini file and upload all the host created with ip address
+   2. Create shutdown.yml file and and update the files with contents present in the repository 
+
+Automate the shutdown of Ubuntu Instancees only using Ansible Conditionals
 
 Hint: Use when condition on ansible gather_facts
+
+## Final 
+Run the ansible-playbook command to initiate the shutdown of Ubuntu instances 
+
+```bash 
+  ansible-playbook -i inventory shutdown.yml --vault-password-file vault.pass
